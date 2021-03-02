@@ -18,29 +18,45 @@ body {
 i::before {
     margin: 0 !important;
 }
-.menu_icons {
+.table {
     border: 1px solid black;
-    max-width: 50%;
+    margin: 0 auto;
+    width: 60%;
+}
+.menu_icons {
+    width: 80%;
     height: auto;
     text-align: center;
     margin: 0 auto;
-    padding: 5% 5% 0 5%;
+    margin-top: 5%;
 }
 .menu_icons h1 {
     text-align: left;
 }
-/* .icons_container {
-    padding: 0 5% 5% 5%;
-} */
 .template_icons {
     display: grid;
     grid-template:
     "up_left up_middle right"
     "down_left down_middle right";
     gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 .template_icons div {
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.template_icons a {
+    text-decoration: none;
+    color: #000;
+}
+.icon-coffee, .icon-dollar, .icon-cube {
+    font-size: 50px;
+}
+.template_icons_text {
+    font-size: 1rem;
 }
 .template_icons div:nth-child(1) { grid-area: up_left; }
 .template_icons div:nth-child(2) { grid-area: up_middle; }
@@ -54,3 +70,25 @@ i::before {
     border-top: 1px solid black;
     margin-top: 10%;
 }
+@media screen and (max-width: 500px) {
+    .table {
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+    .template_icons {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five";
+    }
+        .template_icons div:nth-child(1) { grid-area: one; }
+        .template_icons div:nth-child(2) { grid-area: two; }
+        .template_icons div:nth-child(3) { grid-area: five; }
+        .template_icons div:nth-child(4) { grid-area: four; }
+        .template_icons div:nth-child(5) { grid-area: three; }
+    }
