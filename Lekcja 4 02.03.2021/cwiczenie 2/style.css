@@ -3,4 +3,44 @@
 }
 body {
     margin: 0;
+    background-image: url(img/christmas-dark.png);
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    color: aqua;
+}
+/* ol {
+    display: flex;
+}
+ol > li {
+    border: 2px dashed green;
+}
+ol > li:hover > ul >li {
+    background: red;
+} */
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+ol {
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid black;
+    text-align: center;
+}
+main {
+    display: flex;
+}
+main div {
+    flex: 1 auto;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
 }
