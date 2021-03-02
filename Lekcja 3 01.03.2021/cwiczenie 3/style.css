@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.title {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.menu_one {
+    background: aqua;
+    border-bottom: 1px solid black;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+}
+.menu_one p:first-child {
+    font-weight: bold;
+}
+.menu_one p {
+    display: inline-block;
+}
+.first_section {
+    display: flex;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 0 10vw;
+}
+.first section div {
+    flex: 1;
+}
+.left_side {
+    /* margin-left: 10vw; */
+    flex: 1
+}
+.right_side {
+    /* margin-right: 10vw; */
+    flex: 1;
+}
+.left_side p, .right_side p {
+    font-weight: bold;
+}
+
+
+
+.menu_two {
+    background: lightgreen;
+    border-bottom: 1px solid black;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+}
+.menu_two p:first-child {
+    font-weight: bold;
+}
+.menu_two p {
+    display: inline-block;
+}
+.second_section {
+    position: relative;
+    border: 1px solid black;
+    margin: 0 10vw;
+    min-height: 400px;
+}
+.subtitle {
+    border-bottom: 1px solid black;
+}
+.subtitle p {
+    font-weight: bold;
+    padding: 30px;
+}
+.chart p {
+    font-weight: bold;
+    padding: 30px;
+}
+.one_tower, .two_tower, .three_tower {
+    position: absolute;
+    bottom: 0;
+    width: 5%;
+    border: 1px solid black;
+}
+.one_tower {
+    height: 20%;
+    left: 15%;
+}
+.two_tower {
+    height: 35%;
+    left: 25%;
+}
+.three_tower {
+    height: 55%;
+    left: 35%;
+}
+
+.footer {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 30px;
+}
+.footer p:first-child {
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+body {
+    background: pink;
+    margin: 0;
+}
+.title {
+    border: 1px  solid black;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+.title div {
+    padding: 20px 0px;
+    max-width: 100%;
+}
+.subtitle {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+.subtitle div {
+    border: 1px solid black;
+    padding: 40px;
+    margin: 50px;
+    flex: 1;
+    text-align: center;
+}
+.content {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+.left_side {
+    border: 1px solid black;
+    padding: 25px;
+    margin: 50px 0px 50px 50px;
+    flex: 2;
+    text-align: center;
+}
+.right_side {
+    border: 1px solid black;
+    padding: 25px;
+    margin: 50px 50px 50px 0px;
+    flex: 1;
+    text-align: center;
+}
+.footer {
+    border: 1px solid black;
+    padding: 30px;
+    text-align: right;
+}

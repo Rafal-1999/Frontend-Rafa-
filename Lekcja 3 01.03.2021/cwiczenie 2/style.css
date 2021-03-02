@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.one_section, .two_section, .three_section, .footer {
+    border: 1px solid black;
+}
+.one_section {
+    display: flex;
+    justify-content: flex-end;
+}
+.header {
+    border: 1px solid black;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: aqua;
+    margin-bottom: 20px;
+}
+.header:hover {
+    background: blue;
+}
+.header:active {
+    background: lightblue;
+}
+.logo {
+    background: url(flower.jpg);
+    width: 90px;
+    height: 90px;
+}
+.logo:hover {
+    background-position: 0 -90px;
+}
+.logo:active {
+    background-position: 0 -180px;
+}
+.logo_childs {
+    display: flex;
+}
+.logo_childs .description {
+    border: 1px solid black;
+    padding: 5px;
+    background: white;
+}
+.titles_first_chart {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.title_first_chart {
+    margin: 0px 15px;
+}
+.first_chart {
+    border: 1px solid black;
+    margin: 0px 50px;
+    margin-bottom: 30px;
+    display: flex;
+}
+.first_chart_vertical {
+    border: 1px solid black;
+    margin: 15px;
+    padding: 10px;
+}
+.one_tower {
+    height: 25vw;
+}
+.two_tower { height: 20vw; }
+.three_tower { height: 15vw; }
+.four_tower { height: 10vw; }
+.five_tower { height: 5vw; }
+.second_chart {
+    display: flex;
+}
+.titles_second_chart {
+    margin: 0px 50px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+}
+.title_second_chart {
+    margin: 0px 15px;
+    display: flex;
+}
+.title_second_chart p {
+    border: 1px solid black;
+}
+.second_chart_horizontal {
+    border: 1px solid black;
+    margin: 15px;
+}
+.six_tower { width: 5vw; }
+.seven_tower { width: 10vw; }
+.eight_tower { width: 15vw; }
+.nine_tower { width: 20vw; }
+.ten_tower { width: 25vw; }
+.title_one, .title_two, .title_three {
+    padding-left: 5%;
+    padding-bottom: 30px;
+}
+.question {
+    font-size: 2em;
+}
+.one_part {
+    margin-left: 30vw;
+}
+.two_part {
+    margin-left: 4vw;
+}
+.three_part {
+    margin-left: 3vw;
+}

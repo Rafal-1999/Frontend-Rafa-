@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background: rgb(93, 93, 253);
+}
+div {
+    border: 2px dashed red;
+}
+.div1 {
+    background: rgb(19, 143, 19);
+}
+#divID {
+    background: chocolate;
+}
+.header {
+    display: flex;
+    justify-content: center;
+}
+.div3 {
+    background: rgb(19, 143, 19);
+    margin: 10px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    /* padding: 0px 50px 100px 200px; */
+    padding: 5px 50px;
+}
+.flex {
+    display: flex;
+    border: 5px solid gray;
+}
+.flex div {
+    background: blueviolet;
+}
+.left {
+    flex: 2;
+}
+.right {
+    flex: 1;
+    padding: 15px;
+}
+.flex .left img {
+    max-width: 100%;
+}
+.footer {
+    padding: 15px;
+}

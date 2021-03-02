@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+.sprite {
+    background-image: url(sprites.jpg);
+    width: 90px;
+    height: 90px;
+    background-repeat: no-repeat;
+}
+.sprite:hover {
+    background-position: 0 -90px;
+}
+.sprite:active {
+    background-position: 0 -180px;
+}
