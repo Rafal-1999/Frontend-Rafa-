@@ -32,12 +32,31 @@ header nav {
     justify-content: space-around;
     align-items: center;
     border: 1px solid black;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .first__menu ol {
     padding: 0;
     list-style-type: none;
-    border: 1px solid black;
     text-align: center;
+    padding: 5px;
+    width: 25%;
+}
+.first__menu ol > li {
+    position: relative;
+}
+ol > li > ol {
+    display: none;
+    position: absolute;
+}
+ol > li:hover > ol {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #000;
 }
 main {
     margin: 0 5%;
@@ -47,15 +66,35 @@ main div {
     flex: 2 1 auto;
 }
 .left__side {
+    width: 80%;
     border: 1px solid black;
     margin-right: 5%;
 }
+.article__photo {
+    width: 100%;
+    height: 40vh;
+    background-image: url(img/lis.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 .right__side {
+    width: 20%;
     border: 1px solid black;
     text-align: center;
 }
 .second__menu ol {
     list-style: none;
+    padding: 0;
+}
+.second__menu li {
+    border: 1px solid black;
+    margin: 5%;
+}
+.icon__profile {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/profil.jpg);
 }
 
 .links {
