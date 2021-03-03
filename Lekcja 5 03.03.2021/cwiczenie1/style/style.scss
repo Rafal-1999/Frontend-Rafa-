@@ -1,0 +1,46 @@
+$bgColor: pink;
+$fontColor: blue;
+$borderSize: 3px;
+
+@mixin style($rozmiar, $color) {
+    border: $rozmiar dashed red;
+    font-size: 15px;
+    color: $color;
+}
+%paka {
+    border: $borderSize solid #000;
+    background: yellow;
+}
+
+body {
+    background: $bgColor;
+    @include style(5px, gold);
+    p {
+    color: $fontColor;
+    @include style(5px, gray);
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    }
+    a {
+        color: yellow;
+        @extend %paka;
+    }
+    .flex {
+        display: flex;
+        color: #fff;
+        border: 1px solid #fff;
+        div {
+            border: 2px dashed #fff;
+            padding: 5%;
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .flex__item#{$i} {
+        font-size: 5px * $i;
+        background: lighten(#000, 25% * $i);
+    }
+}

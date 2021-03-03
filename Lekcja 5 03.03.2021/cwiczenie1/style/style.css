@@ -1,0 +1,61 @@
+body a {
+  border: 3px solid #000;
+  background: yellow;
+}
+
+body {
+  background: pink;
+  border: 5px dashed red;
+  font-size: 15px;
+  color: gold;
+}
+
+body p {
+  color: blue;
+  border: 5px dashed red;
+  font-size: 15px;
+  color: gray;
+}
+
+body p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body a {
+  color: yellow;
+}
+
+body .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+body .flex div {
+  border: 2px dashed #fff;
+  padding: 5%;
+}
+
+.flex__item1 {
+  font-size: 5px;
+  background: #404040;
+}
+
+.flex__item2 {
+  font-size: 10px;
+  background: gray;
+}
+
+.flex__item3 {
+  font-size: 15px;
+  background: #bfbfbf;
+}
+
+.flex__item4 {
+  font-size: 20px;
+  background: white;
+}
+/*# sourceMappingURL=style.css.map */
