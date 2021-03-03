@@ -27,15 +27,17 @@ ol > li:hover > ul >li {
     background-repeat: no-repeat;
     margin: 0 auto;
 }
+header {
+    position: sticky;
+    top: -300px;
+    z-index: 1;
+}
 header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: 1px solid black;
     background: #000;
-    position: sticky;
-    top: 0;
-    z-index: 1;
 }
 .first__menu ol {
     padding: 0;
