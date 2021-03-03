@@ -13,7 +13,7 @@ body .article__one, body .article__three {
   border: 1px solid #000;
 }
 
-body .article__one .article__one__items, body .article__three .article__one__items {
+body .article__one .article__one__items, body .article__one .article__three__items, body .article__three .article__one__items, body .article__three .article__three__items {
   -webkit-box-flex: 2;
       -ms-flex: 2 1 auto;
           flex: 2 1 auto;

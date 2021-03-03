@@ -13,7 +13,7 @@ body {
     .article__one, .article__three {
         display: flex;
         border: $borderStyle;
-        .article__one__items {
+        .article__one__items, .article__three__items {
             flex: 2 1 auto;
             padding: 2%;
         }
