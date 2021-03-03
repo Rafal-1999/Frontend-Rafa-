@@ -8,7 +8,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: aqua;
+    color: #fff;
 }
 /* ol {
     display: flex;
@@ -19,23 +19,43 @@ ol > li {
 ol > li:hover > ul >li {
     background: red;
 } */
+.logo {
+    max-width: 500px;
+    height: 300px;
+    background-image: url(img/swistak.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
 header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: 1px solid black;
 }
-ol {
+.first__menu ol {
     padding: 0;
     list-style-type: none;
     border: 1px solid black;
     text-align: center;
 }
 main {
+    margin: 0 5%;
     display: flex;
 }
 main div {
-    flex: 1 auto;
+    flex: 2 1 auto;
+}
+.left__side {
+    border: 1px solid black;
+    margin-right: 5%;
+}
+.right__side {
+    border: 1px solid black;
+    text-align: center;
+}
+.second__menu ol {
+    list-style: none;
 }
 
 .links {
@@ -43,4 +63,12 @@ main div {
     justify-content: space-around;
     align-items: center;
     border: 1px solid black;
+}
+.links__item {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
 }
