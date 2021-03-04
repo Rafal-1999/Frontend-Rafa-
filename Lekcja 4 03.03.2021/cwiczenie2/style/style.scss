@@ -14,11 +14,8 @@ body {
     .section__one, .section__two, .section__three, .main__footer {
         @extend %setStylesOne;
     }
-    .top__header {
-        width: 100%;
-        h1 {
-            margin: 0 auto;
-        }
+    h1 {
+        text-align: center;
     }
     .article__one, .article__three {
         display: flex;
