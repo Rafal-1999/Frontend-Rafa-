@@ -4,22 +4,30 @@ $borderStyle: 1px solid #000;
 @mixin change_column ($reverse) {
     flex-direction: $reverse;
 }
+%setStylesOne {
+    border: $borderStyle;
+    padding: 2px;
+}
 
 body {
     margin: 0;
+    .section__one, .section__two, .section__three, .main__footer {
+        @extend %setStylesOne;
+    }
+    .top__header {
+        width: 100%;
         h1 {
             margin: 0 auto;
+        }
     }
     .article__one, .article__three {
         display: flex;
         border: $borderStyle;
-        .article__one__items, .article__three__items {
-            flex: 2 1 auto;
-            padding: 2%;
-        }
-        .article__three__items {
-            @include change_column (column-reverse);
-        }
+        flex: 2 1 auto;
+        padding: 2%;
+    }
+    .article__three {
+        @include change_column (row-reverse);
     }
     .article__one__items img {
         height: 60vh;
@@ -45,5 +53,8 @@ body {
                 }
             }
         }
+    }
+    .icons__links {
+        border: $borderStyle;
     }
 }
