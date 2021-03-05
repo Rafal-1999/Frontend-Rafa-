@@ -12,6 +12,12 @@
     <div class="bierz__JS">Tekst</div>
     <div onclick="obj.say()">Kliknij</div>
     <div class="clicker">Klikacz</div>
+    <div class="flex">
+        <div class="flex__item">1</div>
+        <div class="flex__item">2</div>
+        <div class="flex__item">3</div>
+        <div class="flex__item">4</div>
+    </div>
     <script>
         console.log("Jakiś tekst");
 
@@ -111,16 +117,158 @@
         // Instrukcja warunkowa IF MULTIPLE (oba warunki spełnione).
         let c1 = 5;
         let c2 = 3;
-        if(c1 == 5 && c2 == 3) {
+        if (c1 == 5 && c2 == 3) {
             console.log("Prawidłowe liczby.");
         }
 
         // Instrukcja warunkowa IF MULTIPLE (choć jeden warunek jest spełniony).
         let c3 = 5;
         let c4 = 3;
-        if(c3 == 5 || c4 == 2) {
+        if (c3 == 5 || c4 == 2) {
             console.log("Jedna z liczb jest prawidłowa.");
         }
+
+
+        // Pętla For na sprawdzanie zgodności liczb z pierwszej tablicy z drugą (wspólne liczby lub obiekty).
+        // DOKOŃCZYĆ!!!!!!!!!!!!!!!!!!!!!
+        let xxx = [1, 2, 3, 4];
+        let yyy = [4, 1, 6, 7];
+        let result = 0;
+        let failed = 0;
+        for (i = 0; i < xxx.length; i++) {
+            console.log(xxx[i]);
+            isElement = false;
+            for (i1 = 0; i1 < yyy.length; i1++) {
+                if (xxx[i] == yyy[i1]) {
+                    result++;
+                } else {
+                    failed++;
+                }
+            }
+        }
+        console.log("Zgadza się:" + " " + result + " " + "liczb.");
+
+        // Pętla For z pomijaniem danego elementu przy wyliczaniu lub przerywaniem pętli.
+        for (j = 0; j < 6; j++) {
+            if (j == 2) {
+                continue; // Continue sprawia, że niżej console.log nie zostanie wyświetlony, czyli liczba 2 zostanie nie wyświetlona. Natomiast break; przerywa wykonywanie się pętli.
+            }
+            console.log(j);
+        }
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        let arr = [1, 2, 3, 4];
+        arr.splice(0, 2, "s"); // To polecenie usuwa obiekty z tablicy z przedziału od 0 do 2. Natomiast trzeci parametr, czyli string "s" zastępuje dany przedział usuniętych obiektów. Tylko raz. Mimo usunięcia kilku obiektów pojawi się tylko jedno "s" .
+        console.log(arr);
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // Przełącznik Switch
+        let z = 1; // Jeżeli podamy tutaj "string" to przy case'ach też piszemy "string" .
+        switch (z) {
+            case 1:
+                console.log("Jestem 1.");
+                break; // Jeżeli nie będzie break; to wyświetli się dalej następny case aż napotka break; .
+            case 2:
+                console.log("Jestem 2.");
+                break;
+            default:
+                console.log("Deafault");
+                break;
+        }
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // Pętla For na tablicy obiektów.
+        let v = [
+            {
+                "name": "John",
+                "surname": "Doe",
+            }, // Tutaj stawiamy przecinek.
+            {
+                "name": "Andrew",
+                "surname": "Loew",
+            },
+            {
+                "name": "Mark",
+                "surname": "Brayan",
+            }
+        ]
+        for (osoba of v) {
+            console.log(osoba.name + " " + osoba.surname);
+        }
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // Pętla While
+        let w = 0;
+        do {
+            if (w % 2 == 0) { // Jeżeli chcemy wyświetlić nieparzyste to używamy warunku w % 2 != 0 .
+                console.log(w);
+            }
+            w++;
+        }
+        while (w < 7);
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // DOM - Document Object Model.
+        // Odwołanie się do elementów w HTML' po klasie. 
+        let flexItem1 = document.getElementsByClassName(".flex__item");
+        let flexItem2 = document.querySelectorAll(".flex__item");
+
+        // flexItem1[0].addEventListener("mouseover", () => {
+        //     console.log("Wykonuje się po najechaniu myszką.");
+        // });
+        // NAPRAWIĆ!!!!!!!!!!!!!!!!!
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // Tworzenie obiektu div ze strony JavaScript.
+        let div = document.createElement("div");
+        div.innerHTML = "TEN DIV";
+        div.className = "TenDIV";
+        div.style.background = "red";
+        div.style.width = "50%";
+        div.style.color = "gold";
+        document.body.appendChild(div);
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // OPERACJE CZASOWE
+        console.log("Czekaj, pa");
+        setTimeout(() => {
+            console.log("Teraz mnie widać.");
+        }, 5000);
+
+
+        // Pierwszy sposób.
+        let interval = setInterval(() => { // let nie jest konieczny. Jednak jak damy to możemy potem gdzieś jeszcze użyć w JS poprzez odwołanie się do zmiennej.
+            console.log("Siemka");
+        }, 3000);
+        clearInterval(interval);
+
+        // Drugi sposób
+        let interval2 = {
+            int: () => { },
+            start() { // Start jest własną nazwą.
+                this.int = setInterval(() => {
+                    console.log("Cześć");
+                }, 2000);
+            },
+            stop() { // Stop jest własną nazwą.
+                clearInterval(this.int);
+            }
+        };
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // SCOPES
+        if (2 == 2) { // Można po prostu napisać true .
+            console.log("dwa");
+            var v1 = 1;
+            let l1 = 1;
+        }
+        console.log(v1); // var można wyciągnąć i użyć w innym miejscu w kodzie.
+        console.log(l1); // To nie wyświetli się, ponieważ let ma zasięg blokowy. W tym wypadku jest zadeklarowany w IF.
+
+        const c1 = 3; // Stała jak np. grawitacja na Ziemi, stała i niezmienna.
+
+
+
     </script>
 </body>
 
