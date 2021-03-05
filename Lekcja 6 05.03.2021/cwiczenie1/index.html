@@ -10,6 +10,8 @@
 
 <body>
     <div class="bierz__JS">Tekst</div>
+    <div onclick="obj.say()">Kliknij</div>
+    <div class="clicker">Klikacz</div>
     <script>
         console.log("Jakiś tekst");
 
@@ -29,26 +31,96 @@
         console.log(x);
 
         // Funkcja
-        function myFunc(a,b){
-            console.log(a*b); // Bez return taka funkcja w klamerce nic nie zwraca.
-            return a*b;
+        function myFunc(a, b) {
+            console.log(a * b); // Bez return taka funkcja w klamerce nic nie zwraca.
+            return a * b;
         }
-        let zwrot = myFunc(2,3);
+        let zwrot = myFunc(2, 3);
         console.log(zwrot);
         document.querySelector(".bierz__JS").innerHTML = zwrot; // Jeżeli używamy tej samej klasy i wyświetlamy w niej jakieś elementy, jak za pomocą tej linijki, to w klasie na stronie internetowej zostanie wyświetlona ostatnia taka operacja.
+
 
         // Materiał z dnia 05.03.2021
 
         // Obiekty
         let a = {
             "name": "John",
-            "saySomething": () => {console.log("something");},
+            "saySomething": () => { console.log("something"); },
             "nextObject": {
                 "param1": "param value"
             }
         };
         a.saySomething();
 
+        console.log(a.name + " " + "Doe"); // Łączenie obiektów za pomocą znaku + . W tym przypadku łączymy obiekt wcześniej zadeklarowany ze string'iem, czyli zwykłym napisem.
+
+        // Tablice
+        let heroes = ["siostry", "Paweł", "stonoga"];
+        heroes[0] = "bracia"; // Nadpisujemy wartość w tablicy na pierwszym miejscu, czyli zerowym bo liczymy od zera.
+        heroes.pop(); // Usuwa od końca ostatni element w tablicy.
+        heroes.push("Olisadebe"); // Dodaje na końcu tablicy nowy element.
+
+        // Tablica, która zawiera obiekty.
+        let y = [
+            { "name": "John" },
+            { "name": "Andrew" },
+            { "name": "Joahin" }
+        ];
+        console.log(y[1].name); // Wyświetlenie danego obiektu z tablicy.
+
+        // Wywołanie danego obiektu po kliknięciu na dany element w HTML'u. Połączone jest to za pomocą polecenia onclick="obj.say()" .
+        let obj = {
+            "say": () => {
+                console.log("Emano");
+            }
+        }
+
+
+        let clicker = document.querySelector(".clicker");
+        clicker.onclick = obj.say();
+        clicker.onclick = () => { obj.say() }; // Tak wygląda funkcja strzałkowa.
+        clicker.onclick = () => { }; // Ściąganie funkcjonalności, czyli zabierze wyświetlenie poprzedniej tej samej czynności.
+
+
+        // Przykład stworzonej klasy.
+        class Pet {
+            constructor(x, y, z) {
+                this.x = x;
+                this.y = y;
+                this.z = z;
+                this.name = "John";
+            }
+            getFullYear() {
+                return "To jest Year";
+            }
+        }
+        let dog = new Pet(1, 2, 3);
+        let dt = new Date();
+
+
+        // Instrukcja warunkowa IF.
+        let b = 1;
+        if (b == 0) { // Jeżeli warunek let wynosi 0 to funkcja warunkowa wyświetli napis "Jest zero" .
+            console.log("Jest zero.");
+        } else if (b == 1) {
+            console.log("To jest jeden.");
+        } else {
+            console.log("Nie jest zero.");
+        }
+
+        // Instrukcja warunkowa IF MULTIPLE (oba warunki spełnione).
+        let c1 = 5;
+        let c2 = 3;
+        if(c1 == 5 && c2 == 3) {
+            console.log("Prawidłowe liczby.");
+        }
+
+        // Instrukcja warunkowa IF MULTIPLE (choć jeden warunek jest spełniony).
+        let c3 = 5;
+        let c4 = 3;
+        if(c3 == 5 || c4 == 2) {
+            console.log("Jedna z liczb jest prawidłowa.");
+        }
     </script>
 </body>
 
