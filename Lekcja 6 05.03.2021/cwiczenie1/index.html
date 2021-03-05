@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Szkolenie Frontend 6.1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="bierz__JS">Tekst</div>
+    <script>
+        console.log("Jakiś tekst");
+
+        let bierzMnieJS1 = document;
+        console.log(bierzMnieJS1);
+
+        let bierzMnieJS2 = document.querySelector(".bierz__JS");
+        bierzMnieJS2.innerHTML = "Witam";
+        alert("Siemanko"); // Komunikat na stronie blokuje wczytywanie dalszego kodu. Po zamknięciu wczytuje dalszą część kodu.
+        console.log(bierzMnieJS2);
+
+        // Operatory
+        let x = 5;
+        x++; // Dodaje 1 do zmiennej let, która ma wartość 5. Wynik to 6.
+        x += 5; // Dodaje 5 do zmiennej let, która do teraz ma 6. Wynik tej operacji to 11.
+        x *= 3; // Mnoży razy 3 wartość zmiennej let. Wynik tej operacji to 33.
+        console.log(x);
+
+        // Funkcja
+        function myFunc(a,b){
+            console.log(a*b); // Bez return taka funkcja w klamerce nic nie zwraca.
+            return a*b;
+        }
+        let zwrot = myFunc(2,3);
+        console.log(zwrot);
+        document.querySelector(".bierz__JS").innerHTML = zwrot; // Jeżeli używamy tej samej klasy i wyświetlamy w niej jakieś elementy, jak za pomocą tej linijki, to w klasie na stronie internetowej zostanie wyświetlona ostatnia taka operacja.
+
+        // Materiał z dnia 05.03.2021
+
+        // Obiekty
+        let a = {
+            "name": "John",
+            "saySomething": () => {console.log("something");},
+            "nextObject": {
+                "param1": "param value"
+            }
+        };
+        a.saySomething();
+
+    </script>
+</body>
+
+</html>
