@@ -7,8 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
         }
     </style>
 </head>
@@ -21,10 +29,26 @@
             setPlane() {
                 this.plane.style.border = "2px dashed red";
                 document.body.append(this.plane);
-                console.log(this.plane.offsetHeight);
-                console.log(this.plane.offsetWidth);
+                console.log(window.screen.width);
+                console.log(window.screen.height);
+
+                let dim = 0;
+                if(window.screen.width > window.screen.height) {
+                    dim = window.screen.height;
+                } else {
+                    dim = window.screen.width;
+                }
+                dim = 0.8 * dim;
+                this.plane.style.width = dim + "px";
+                this.plane.style.height = dim + "px";
             }
         };
+
+        // Set resize.
+        window.onresize = () => {
+            // console.log("Zmienia się rozmiar.");
+            game.setPlane();
+        }
         game.setPlane();
     </script>
 </body>
