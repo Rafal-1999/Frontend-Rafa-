@@ -41,12 +41,14 @@
                 // document.querySelector(".lives");
                 if (this.lives == 0) {
                     game.over(false);
-                }              
+                }
             },
-            interval: () => {setInterval(() => {
-                game.time--;
-                document.querySelector(".time").innerHTML;
-            }, 1000)},
+            interval: () => {
+                setInterval(() => {
+                    game.time--;
+                    document.querySelector(".time").innerHTML;
+                }, 1000)
+            },
             plane: document.createElement("main"),
             setPlane() {
                 this.plane.style.border = "2px dashed red";
@@ -132,11 +134,11 @@
                     } else if (type == "lives") {
                         console.log();
                     }
-                    } else {
-                        wall.style.background = "red";
-                    }
+                } else {
+                    wall.style.background = "red";
                 }
             }
+        }
         };
         // game.walls.singleWall(0,0,25,10); // W taki sposób można ustawiać elementy w tym naszym okienku.
         // game.walls.singleWall(0,11,25,10);
