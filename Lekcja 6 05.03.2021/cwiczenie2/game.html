@@ -52,6 +52,7 @@
             plane: document.createElement("main"),
             setPlane() {
                 this.plane.style.border = "2px dashed red";
+                this.plane.style.backgroundImage = "siatka.svg";
                 document.body.append(this.plane);
                 console.log(window.screen.width);
                 console.log(window.screen.height);
@@ -133,12 +134,11 @@
                         };
                     } else if (type == "lives") {
                         console.log();
+                    } else {
+                        wall.style.background = "red";
                     }
-                } else {
-                    wall.style.background = "red";
                 }
             }
-        }
         };
         // game.walls.singleWall(0,0,25,10); // W taki sposób można ustawiać elementy w tym naszym okienku.
         // game.walls.singleWall(0,11,25,10);
