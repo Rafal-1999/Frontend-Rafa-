@@ -17,6 +17,9 @@
     <p class="s1">Tekst paragrafu</p>
     <p class="s5">Tekst paragrafu</p>
     <p class="link">Tutaj jest link</p>
+    <div class="div1">Rodzic
+        <div class="div2">Dziecko</div>
+    </div>
     <script src="js/jquery.js"></script>
     <script>
         // $("p").hide();
@@ -54,7 +57,13 @@
         .attr("class", "tenDiv")
         .text("tenDIV")
         .css({
-            "background": "green"
+            "background": "green",
+            "position": "fixed",
+            "top": "0",
+            "left": "50",
+            "margin": "10px",
+            "padding": "15px",
+            "width": "100px"
         })
         $("body").append(dodane) // append dopina do danego div'a na końcu słowo w nawiasie dodane . Zamiast append może być prepend , które przypina na początku do div'a to słowo dadane .
 
@@ -62,7 +71,12 @@
 
         $("body").empty(); // Usuwa podobnie jak wcześniejsze remove , tylko empty działa na więcej elementów.
 
-        
+        console.log($(div).width()); //
+        console.log($(div).innerWidth()); //
+        console.log($(div).innerWidth()); //
+        console.log($(div).innerWidth()); //
+
+        console.log($(div2).parent()); // Wyświetli w konsoli rodzica, czyli o jeden stopień wyżej (nadrzędny element).
     </script>
 </body>
 
