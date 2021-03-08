@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Szkolenie Frontend 7.4</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body data-ng-app="myApp" data-ng-init="Aplikacja" data-ng-controller="Dane">
+    <!-- Angular JS -->
+    <header class="top-header">
+        <div class="top-header__container">
+            <p class="top-header__text">Szukaj</p>
+            <input type="text" name="search" data-ng-model="search" placeholder="Wpisz co szukasz">
+        </div>
+    </header>
+    <main class="main-section" >
+        <h1>Nasi pracownicy</h1>
+        <section class="main-section__flex" data-ng-repeat="y in workers | filter:search">
+            <div class="main-section__flex-item">
+                <div>{{y.Imie}}</div>
+                <div>{{y.Nazwisko}}</div>
+                <div>{{y.Stanowisko}}</div>
+                <div>{{y.["Staz pracy"]}}</div>
+            </div>
+        </section>
+    </main>
+    <script src="angularJS/angular.js"></script>
+    <script>
+        app.controller('Dane', function ($scope, $http, $filter) {
+            //  ↙ pobieranie danych GET przez http
+            $http.get("json/pracownicy.json")
+                //				↖ ścieżka do pliku
+                .then(function (response) {
+                    //					↖ wartość tego będzie w data:{}
+                    $scope.workers = response.data; // rozbieramy data:{}
+                    //				↖ definiujemy wartość do WIDOKU	
+                });
+            // $http.get("biegacze.json")
+            // .then(function (response) {
+            //     $scope.biegacze = response.data;
+            // });
+        });
+    </script>
+</body>
+
+</html>

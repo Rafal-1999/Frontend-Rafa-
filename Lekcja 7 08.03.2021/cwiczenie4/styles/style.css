@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.top-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.top-header__container p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 20px;
+}
+.top-header__container input {
+    height: 50px;
+}
+.main-section__flex {
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-section__flex-item {
+    max-width: 30%;
+}
