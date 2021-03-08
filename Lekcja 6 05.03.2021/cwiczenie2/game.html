@@ -34,15 +34,17 @@
     <!-- Gra -->
     <script>
         let game = {
-            lives: 5,
-            time: 10,
+            lives: 5, // Życia w grze.
+            // Obniżanie żyć.
             decLives() {
                 this.lives--; // Zmniejszanie licznika żyć.
                 // document.querySelector(".lives");
                 if (this.lives == 0) {
+                    // Jeżeli liczba żyć bedzie równa zeru wtedy przegrywamy.
                     game.over(false);
                 }
             },
+            time: 10,
             interval: () => {
                 setInterval(() => {
                     game.time--;
