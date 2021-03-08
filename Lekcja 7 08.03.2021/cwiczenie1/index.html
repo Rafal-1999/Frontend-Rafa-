@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Szkolenie Frontend 7.1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <p>Cześć</p>
+    <p class="s2">Cześć ponownie</p>
+    <button>kliknij mnie</button>
+    <div class="s3">Tekst do animacji</div>
+    <div class="s4">Przykładowe style</div>
+    <p class="s1">Tekst paragrafu</p>
+    <p class="s5">Tekst paragrafu</p>
+    <p class="link">Tutaj jest link</p>
+    <script src="js/jquery.js"></script>
+    <script>
+        // $("p").hide();
+        // $(".s2").show();
+        // Funkcja, która działa, że po naciśnięciu przycisku pokazują się oba <p> z <body>, a ponowne kliknięcie ukrywają się elementy.
+        $("button").click(() => { // Funkcja strzałkowa
+            $("p").toggle(2000); // Gdyby było fadeToggle to wtedy elementy <p> pokazują się z animacją znikania i pokazywania. W () można ustawić czas np. 5 sekund, czyli (5000) .
+            // Moze również być slideToggle . Sprawia, że ładnie rozsuwa się zawartość lub zasuwa.
+        })
+
+        $(".s3").animate(
+            {
+                "margin-left": "220px",
+                "margin-top": "60px"
+            }
+        )
+
+        $(".s4").css({
+            "color": "blue",
+            "border": "2px dashed red"
+        })
+
+        let v = $(".s1").html(); // Pustym nawiasem pobieramy co znajduje się w danym elemencie po przykładowej klasie .s1 .
+        console.log(v);
+
+        let z = "<br>B</b>";
+        $(".s5").text(z);
+        let x = "<br>B</b>";
+        $(".s5").html(x);
+
+        $(".link").attr({"href": "https://facebook.com"});
+
+        let div = document.createElement("div");
+        $(div)
+        .attr("class", "tenDiv")
+        .text("tenDIV")
+        .css({
+            "background": "green"
+        })
+        $("body").append(dodane) // append dopina do danego div'a na końcu słowo w nawiasie dodane . Zamiast append może być prepend , które przypina na początku do div'a to słowo dadane .
+
+        $(p).remove(); // Usuwa element z HTML'a.
+
+        $("body").empty(); // Usuwa podobnie jak wcześniejsze remove , tylko empty działa na więcej elementów.
+
+        
+    </script>
+</body>
+
+</html>
