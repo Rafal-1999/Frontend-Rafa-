@@ -20,12 +20,12 @@ body {
     height: 50px;
 }
 .main-section__flex {
-    border: 1px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .main-section__flex-item {
-    max-width: 30%;
+    text-align: center;
+    border: 1px solid #000;
+    padding: 30px;
 }
