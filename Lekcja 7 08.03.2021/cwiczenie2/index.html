@@ -49,23 +49,38 @@
             }
         ];
 
-            for(let i = 0; i < data.legth; i++) {
-                let img = document.createElement("img");
-                $(img).attr({
-                    "src": data[i].src,
-                    "alt": data[i].desc
-                })
-
-                let dom = $("nav").children();
-                console.log(dom[i]);
-                $(dom[i]).append(img)
+        for (let i = 0; i < data.legth; i++) {
+            let img = createImg(i);
+            let dom = $("nav").chldren();
+            $(dom[i])
+                .append(img)
                 .click(() => {
+                    let newImg = createImg(i);
                     let output = $("main").children();
                     console.log(output);
-                    $(output[0]).html(img);
-                    $(output[0]).html(data.i.desc);
+                    $(output[0]).html(newImg);
+                    $(output[1]).html(data[i].desc);
                 })
-            }
+        }
+
+        function createImg(i) {
+            let img = document.createElement("img");
+            $(img).attr({
+                "src": data[i].src,
+                "alt": data[i].desc
+            })
+            return img;
+        }
+
+        // let dom = $("nav").children();
+        // console.log(dom[i]);
+        // $(dom[i]).append(img)
+        //     .click(() => {
+        //         let output = $("main").children();
+        //         console.log(output);
+        //         $(output[0]).html(img);
+        //         $(output[0]).html(data.i.desc);
+        //     })
     </script>
 </body>
 
