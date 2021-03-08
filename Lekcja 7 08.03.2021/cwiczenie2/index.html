@@ -15,12 +15,12 @@
             <h1>Przygody Pana Cyfrowego</h1>
         </div>
     </div>
-    <div class="subtitle">
+    <nav class="subtitle">
         <div class="picture">GIF 1</div>
         <div class="picture">GIF 2</div>
         <div class="picture">GIF 3</div>
         <div class="picture">GIF 4</div>
-    </div>
+    </nav>
     <div class="content">
         <div class="left_side">GIF</div>
         <div class="right_side">Opis GIFA (np. Pan Cyfrowy wstaje)</div>
@@ -30,6 +30,42 @@
     </div>
     <script src="js/jquery.js"></script>
     <script>
+        let data = [
+            {
+                "src": "img/gada.gif",
+                "desc": "Pan Cyfrowy sobie gada"
+            },
+            {
+                "src": "img/majta nogą.gif",
+                "desc": "Pan Cyfrowy sobie gada"
+            },
+            {
+                "src": "img/siada.gif",
+                "desc": "Pan Cyfrowy sobie gada"
+            },
+            {
+                "src": "img/wstaje.gif",
+                "desc": "Pan Cyfrowy sobie gada"
+            }
+        ];
+
+            for(let i = 0; i < data.legth; i++) {
+                let img = document.createElement("img");
+                $(img).attr({
+                    "src": data[i].src,
+                    "alt": data[i].desc
+                })
+
+                let dom = $("nav").children();
+                console.log(dom[i]);
+                $(dom[i]).append(img)
+                .click(() => {
+                    let output = $("main").children();
+                    console.log(output);
+                    $(output[0]).html(img);
+                    $(output[0]).html(data.i.desc);
+                })
+            }
     </script>
 </body>
 
