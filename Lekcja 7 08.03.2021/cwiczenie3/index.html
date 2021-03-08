@@ -8,7 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body data-ng-app="myApp" data-ng-init="Aplikacja">
     <!-- Angular JS -->
+    <script src="angularJS/angular.js"></script>
+    <input type="text" data-ng-model="Jakiś tekst">
+    <br>
+    <span data-ng-bind="n"></span>
+    {{jakisText|uppercase}}
+    <script>
+    </script>
 </body>
+
 </html>
