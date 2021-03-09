@@ -10,5 +10,8 @@
     "szkolenie"
   ],
   "author": "Rafal",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hello-world-npm": "^1.1.1"
+  }
 }
