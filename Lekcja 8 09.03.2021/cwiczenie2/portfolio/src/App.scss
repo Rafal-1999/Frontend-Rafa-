@@ -1,0 +1,64 @@
+body {
+    .jasny {
+        background: #FFF;
+        color: #000;
+    }
+    .ciemny {
+        background: #000;
+        color: #FFF;
+    }
+    // background: lightgreen;
+    font-size: 25px;
+    box-sizing: border-box;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .main-header {
+        border: 2px dashed blue;
+        text-align: center;
+        h1 {
+            text-transform: uppercase;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            border: 2px dashed red;
+            a {
+                border: 1px solid #000;
+                padding: 10px 20px;
+                margin: 15px 20px;
+            }
+        }
+    }
+    .main-container {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        .main-container__left {
+            margin: 0 2%;
+            text-align: center;
+            flex: 1;
+            img {
+                height: 400px;
+                padding-top: 100px;
+            }
+        }
+        .main-container__right {
+            flex: 2;
+            .main-container__right-header {
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+    .button-color {
+        width: 20%;
+        height: 50px;
+        border-radius: 50px;
+        background: orange;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 50px;
+    }
+}
